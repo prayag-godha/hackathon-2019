@@ -1,0 +1,4 @@
+infinite scroll: https://sroze.github.io/ngInfiniteScroll/demo_async.html
+https://sroze.github.io/ngInfiniteScroll/documentation.html
+
+rotating images: https://codepen.io/mihnsen/pen/ZejQBJ
