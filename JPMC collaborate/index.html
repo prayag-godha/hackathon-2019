@@ -168,9 +168,15 @@
 						
 							<div infinite-scroll='ghRepo.nextPage()' infinite-scroll-disabled='ghRepo.busy' infinite-scroll-distance='1'> 
 								<div ng-repeat='repo in ghRepo.repos'>
-									<div style="min-height:200px; border:1px solid #0b509e; margin: 2%" id={{repo.id}}>
-										<div style="padding-top: 1%; padding-left: 1%">
+									<div style="min-height:200px; border:1px solid #0b509e; margin: 2%; border-radius: 25px;overflow: auto" id={{repo.id}}>
+										<div style="padding-top: 1%; padding-left: 1%; text-align: center">
+											<<< Title: repo.title >>>
+										</div>
+										<div style="padding-left: 1%">
 										<<<	Name: repo.user_name>>>
+										</div>
+										<div style = "padding-left: 1%;">
+												<<<	Location: repo.location>>>
 										</div>
 										<div style = "padding-left: 1%">
 											<<<	Category: repo.Category>>>
@@ -179,12 +185,12 @@
 												<<<	Type: repo.type>>> {BUY/SELL/SUGGESTION/GENERAL}
 										</div>
 										<div style = "padding-left: 1%;padding-top: 1%">
-												<<<	Content: repo.content>>>
+												<<<	Content: repo.description>>>
 										</div>
 										<div style="text-align: center;">
 											<a ng-href='{{repo.html_url}}' target='_blank'>{{repo.name}}</a>
 										</div>
-										<div style="float: right;margin-right: 2%" class="btn btn-primary">
+										<div style="float: right;margin-right: 2%;margin-bottom: 1%" class="btn btn-primary">
 											Email <<< user_name >>>>
 										</div>
 									</div>
