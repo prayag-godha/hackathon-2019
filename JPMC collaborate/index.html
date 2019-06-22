@@ -36,7 +36,7 @@
 	<![endif]-->
 
 </head>
-<body>
+<body  ng-app='myApp' >
 	
 	<div id="wrapper">
         
@@ -163,12 +163,12 @@
 
 		<section class="section overfree" style="padding: 5rem 0" >
 			<div class="container">
-					<div ng-app='myApp' ng-controller='DemoController'>
+					<div ng-controller='DemoController'>
 							<!-- <div id="sidebar">FIXED HERE</divs> -->
 						
 							<div infinite-scroll='ghRepo.nextPage()' infinite-scroll-disabled='ghRepo.busy' infinite-scroll-distance='1'> 
 								<div ng-repeat='repo in ghRepo.repos'>
-									<div style="min-height:200px; border:1px solid #0b509e; margin: 2%">
+									<div style="min-height:200px; border:1px solid #0b509e; margin: 2%" id={{repo.id}}>
 										<div style="padding-top: 1%; padding-left: 1%">
 										<<<	Name: repo.user_name>>>
 										</div>
