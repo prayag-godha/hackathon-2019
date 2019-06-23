@@ -30,6 +30,9 @@
 	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="style.css">
 	
+	
+	<link rel="stylesheet" href="css/images-grid.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -170,28 +173,64 @@
 								<div ng-repeat='repo in ghRepo.repos'>
 									<div style="min-height:200px; border:1px solid #0b509e; margin: 2%; border-radius: 25px;overflow: auto" id={{repo.id}}>
 										<div style="padding-top: 1%; padding-left: 1%; text-align: center">
-											<<< Title: repo.title >>>
+											<b>
+											<!-- <<< Title: repo.title >>> -->
+												2 BHK Available for Sale
+											</b>
 										</div>
 										<div style="padding-left: 1%">
-										<<<	Name: repo.user_name>>>
+										<!-- <<<	Name: repo.user_name>>> -->
+											Posted By: Prayag Godha
 										</div>
 										<div style = "padding-left: 1%;">
-												<<<	Location: repo.location>>>
+												<!-- <<<	Location: repo.location>>> -->
+											Location: Bangalore
 										</div>
 										<div style = "padding-left: 1%">
-											<<<	Category: repo.Category>>>
+											<!-- <<<	Category: repo.Category>>> -->
+											Category: Housing
 										</div>
 										<div style = "padding-left: 1%;">
-												<<<	Type: repo.type>>> {BUY/SELL/SUGGESTION/GENERAL}
+												<!-- <<<	Type: repo.type>>> {BUY/SELL/SUGGESTION/GENERAL} -->
+												Type: SELL
 										</div>
 										<div style = "padding-left: 1%;padding-top: 1%">
-												<<<	Content: repo.description>>>
+												<!-- <<<	Content: repo.description>>> -->
+												2 BHK Available for Sale. Fully Furnished. Rent: xxxxx
 										</div>
+										<div>
+											<div style = "padding-left: 1%;">Images:</div>
+											<div id="gallery1"></div>
+										</div>
+										<script>
+
+											var images = [
+												'https://unsplash.it/1300/800?image=875',
+												'https://unsplash.it/1300/800?image=874',
+												'https://unsplash.it/1300/800?image=872',
+												'https://unsplash.it/1300/800?image=868',
+												'https://unsplash.it/1300/800?image=839',
+												'https://unsplash.it/1300/800?image=838'
+											];
+										
+											$(function() {
+										
+												$('#gallery1').imagesGrid({
+													images: images
+												});
+												
+										
+											});
+										
+										</script>
 										<div style="text-align: center;">
 											<a ng-href='{{repo.html_url}}' target='_blank'>{{repo.name}}</a>
 										</div>
-										<div style="float: right;margin-right: 2%;margin-bottom: 1%" class="btn btn-primary">
-											Email <<< user_name >>>>
+										<div style="float: right;margin-right: 2%;margin-bottom: 1%" class="btn btn-primary" >
+											<!-- Email <<< user_name >>>> -->
+											<a ng-href="mailto:{{repo.name}}" target="_blank" style="color: white">
+												Email Prayag
+											</a>
 										</div>
 									</div>
 								
@@ -310,4 +349,6 @@
 <!-- `   <script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script> -->
 <script src="https://rawgithub.com/BinaryMuse/ngInfiniteScroll/1.0.0/build/ng-infinite-scroll.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/images-grid.js"></script>
+
 </html>
