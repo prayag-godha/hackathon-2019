@@ -56,13 +56,13 @@
 				            </button>
 							<a class="navbar-brand" href="index.html"><img src="images/collab.png" alt="Linda" width="60px" height="50px">JPMC Collaborate</a>
 				        </div>
-				        <div id="navbar" class="navbar-collapse collapse">
+				        <div  ng-controller='MainController' id="navbar" class="navbar-collapse collapse">
 				            <ul class="nav navbar-nav navbar-right">
 				                <!-- <li><a href="page-about.html">What is SEO?</a></li>
 				                <li><a href="case-studies.html">Case Studies</a></li>
 				                <li><a href="blog.html">Blog</a></li>
 				                <li><a href="page-contact.html">Contact</a></li> -->
-                                <li class="lastlink hidden-xs hidden-sm"><a class="btn btn-primary" href="page-seo-analysis.html"><i class="glyphicon glyphicon-search"></i> POST</a></li>
+                                <li class="lastlink hidden-xs hidden-sm"><a class="btn btn-primary" ng-click="openModal()"><i class="glyphicon glyphicon-search"></i> POST</a></li>
 								<li><a href="#">My Profile</a></li>
 							</ul>
 				        </div><!--/.nav-collapse -->
@@ -344,10 +344,18 @@
 </body>
 <script data-require="jquery@2.0.3" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.js"></script>
 <!-- `   <script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script> -->
 <script src="https://rawgithub.com/BinaryMuse/ngInfiniteScroll/1.0.0/build/ng-infinite-scroll.min.js"></script>
+<script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.js" integrity="sha256-kWre8PbK2uttyn/pCwCmMblEFNMgLoFb+3Aqp0LQr7s=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+  
 <script src="js/script.js"></script>
 <script src="js/images-grid.js"></script>
 

@@ -1,0 +1,50 @@
+<div class="modal-header">
+ <h3 class="modal-title" id="modal-title">Post</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+  <!-- <p>Selected category: {{model.selectedCategory}}</p>
+  <p>Selected Title: {{model.title}}</p>
+  <p>Selected Description: {{model.description}}</p>
+   --><table style="border-collapse: separate;border-spacing: 1em 1em;">
+  <tr>
+  <td>
+  <label for="categoryList">Category:</label>
+  </td><td>
+  <ui-select id="categoryList" theme="select2" ng-model="model.selectedCategory" style="width:300px">
+    <ui-select-match>
+        <span ng-bind="$select.selected.name"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+        <span ng-bind="item.name"></span>
+    </ui-select-choices>
+  </ui-select>
+  </td>
+  </tr>
+  
+  <tr><td>
+  <label for="title">Title:</label>
+  </td><td>
+  <input id="title" type="text" ng-model="model.title">
+  </td></tr>
+  <tr><td>
+  <label for="description">Description:</label>
+  </td><td>
+  <textarea id="description" ng-model="model.description" style="width:100%;"></textarea>
+  </td></tr>
+  <tr><td>
+  <label for="image">Image:</label>
+  </td><td>
+	  <input id="image" type="file" file-model="myFile"/>
+    <button ng-click="uploadFile()">Upload</button>
+    <span>{{model.imageName}}</span>
+  </td></tr>
+  
+  
+  </table>
+</div>
+<div class="modal-footer">
+ <button class="btn btn-primary" type="button" ng-click="ok()">Post</button>
+ <button class="btn btn-warning" type="button" ng-click="cancelModal()">Cancel</button>
+
+</div>
